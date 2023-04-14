@@ -1,8 +1,10 @@
-Encryption and Decryption Script
+# Encryption and Decryption Script
+
 This script implements a custom encryption and decryption algorithm using Python.
 The script defines five functions: generate_keys, encrypt, decrypt, string_to_int_list, and int_list_to_string.
 
-How it works
+## How it works
+
 The generate_keys function takes in three arguments: K, H, and P. 
 K is the key used to generate the subkeys, H is a user-defined permutation, 
 and P is a fixed permutation defined in the function. 
@@ -22,6 +24,7 @@ The first function takes in a string as an argument and returns a list of intege
 The second function takes in a list of integers as an argument and returns a string obtained by converting each integer to its corresponding ASCII character.
 
 ## How to execute
+
 To execute this script, you need to have Python installed on your computer. 
 Open a terminal or command prompt, navigate to the directory where you saved this script, and run it using the command:
 
@@ -35,13 +38,14 @@ pi: The user-defined shift order used in encryption/decryption. Enter 8 integers
 N: The message to be encrypted. Enter a string.
 After entering these values, press Enter to run the script.
 
-The script will convert these values to lists of integers using the `string_to_int_list function, generate two subkeys using the provided key and permutation, encrypt the message using these subkeys and shift order, and decrypt it again using these same subkeys and shift order.
+The script will convert these values to lists of integers using the string_to_int_list function, generate two subkeys using the provided key and permutation, encrypt the message using these subkeys and shift order, and decrypt it again using these same subkeys and shift order. 
+
 The script will then convert these values back to text using the int_list_to_string function and print out both subkeys and encrypted message then decrypted message.
 
 
 ## Here is an example of how this script can be used:
 
-python encryptionTp.py
+``` python encryptionTp.py
 Please enter the values of K: (K is the key used to generate the subkeys) separated by spaces: abcdefgh
 Please enter the values of H: (H is the user-defined permutation used) separated by spaces: 7 6 5 4 3 2 1 0
 Please enter the values of pi: (pi is the user-defined shift order used) separated by spaces: 0 1 2 3 4 5 6 7
