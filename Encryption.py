@@ -1,10 +1,13 @@
 def generate_keys(K, H, P):
     # Apply the user-defined permutation H to the key K
     K = [K[H[i]] for i in range(8)]
-    # Generate the first subkey k1 by XORing pairs of elements from K
-    k1 = [K[i] ^ K[i + 4] for i in range(4)]
-    # Generate the second subkey k2 by ANDing pairs of elements from K
-    k2 = [K[i + 4] & K[i] for i in range(4)]
+    # Divide K into two blocks of 4 bits
+    k1_prime = K[:4]
+    k2_prime = K[4:]
+    # Generate k1 by XORing k1_prime and k2_prime
+    k1 = [k1_prime[i] ^ k2_prime[i] for i in range(4)]
+    # Generate k2 by ANDing k2_prime and k1_prime
+    k2 = [k2_prime[i] & k1_prime[i] for i in range(4)]
     # Rotate k1 to the left by two positions
     k1 = k1[2:] + k1[:2]
     # Rotate k2 to the right by one position
