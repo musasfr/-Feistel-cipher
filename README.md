@@ -55,6 +55,10 @@ Please enter the values of N: (N is the message to be encrypted) separated by sp
 Subkeys: [6, 7, 4, 5] [0, 0, 0, 0]
 Encrypted message: [4, 5, 6, 7, 4, 5, 6, 7]
 Decrypted message: [1, 2, 3, 4, 5, 6, 7, 8]
-In this example, the user entered 1, 2, 3, 4, 5, 6, 7, and 8 as the key K, 7, 6, 5, 4, 3, 2, 1, and 0 as the permutation H, 0, 1, 2, 3, 4, 5, 6, and 7 as the shift order pi, and 1, 2, 3, 4, 5, 6, 7, and 8 as the message to be encrypted.
+In this example, the user entered 1, 2, 3, 4, 5, 6, 7, 
+and 8 as the key K, 7, 6, 5, 4, 3, 2, 1, 
+and 0 as the permutation H, 0, 1, 2, 3, 4, 5, 6, 
+and 7 as the shift order pi, and 1, 2, 3, 4, 5, 6, 7,
+and 8 as the message to be encrypted.
 The script generated two subkeys [6,7,4,5] and [0,0,0,0] using these values and encrypted the message to get [4,5,6,7,4,5,6,7].
 then decrypted this encrypted message to recover the original message [1 ,2 ,3 ,4 ,5 ,6 ,7 ,8].
